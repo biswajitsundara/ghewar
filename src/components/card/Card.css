@@ -1,0 +1,26 @@
+.card {
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card.small {
+    width: 150px;
+    height: 100px;
+  }
+  
+  .card.medium {
+    width: 250px;
+    height: 150px;
+  }
+  
+  .card.large {
+    width: 350px;
+    height: 200px;
+  }
+  
