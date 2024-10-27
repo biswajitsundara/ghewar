@@ -26,14 +26,17 @@ npm install ghewar
 
 ## Usage
 ```bash
-import React from 'react';
-import { Button, Card } from 'ghewar';
+import { Button, Card, Heading } from 'ghewar'
 
 const App = () => (
   <div>
-    <Card title="Welcome to My Library">
-      <Button onClick={() => alert('Button clicked!')}>Click Me!</Button>
-    </Card>
+    <Card 
+        variant='secondary'
+        size='medium'
+        header = {<Heading level={2}>This is a sample card</Heading>}
+        body = {<p>This is a sample card body text</p>}
+        footer = {<Button onClick={()=>alert('Clicked OK')}>OK</Button>}
+      />
   </div>
 );
 
