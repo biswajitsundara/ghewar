@@ -1,16 +1,38 @@
-import React from 'react';
-import './Card.css';
+import { ReactNode } from "react";
+import "./Card.css";
+import classNames from "classnames";
 
 interface CardProps {
-  variant: 'small' | 'medium' | 'large';
-  backgroundColor: string;
-  children: React.ReactNode;
+  header?: ReactNode;
+  body?: ReactNode;
+  footer?: ReactNode;
+  size?: "default" | "small" | "medium" | "large";
+  variant?: "default" | "primary" | "secondary";
+  onClick?: () => void;
 }
 
-const Card: React.FC<CardProps> = ({ variant, backgroundColor, children }) => {
+const Card = ({
+  header,
+  body,
+  footer,
+  size = "default",
+  variant = "default",
+  onClick,
+}: CardProps) => {
+  const cardClassNames = classNames(
+    "card",
+    `size-${size}`,
+    `variant-${variant}`,
+    {
+      "card-hover": onClick,
+    }
+  );
+
   return (
-    <div className={`card ${variant}`} style={{ backgroundColor }}>
-      {children}
+    <div className={cardClassNames} onClick={onClick}>
+      {header && <div className="card-header">{header}</div>}
+      {body && <div className="card-body">{body}</div>}
+      {footer && <div className="card-footer">{footer}</div>}
     </div>
   );
 };
