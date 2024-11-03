@@ -1,0 +1,47 @@
+.image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 12px;
+  color: rgb(16, 16, 15);
+}
+
+.image-container > .image {
+  display: flex;
+  object-fit: cover;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.image-xs {
+  height: 75px;
+  width: 150px;
+}
+
+.image-sm {
+  width: 150px;
+  height: 100px;
+}
+
+.image-md {
+  width: 350px;
+  height: 210px;
+}
+
+.image-lg {
+  width: 600px;
+  height: 400px;
+}
+
+.overlay {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}

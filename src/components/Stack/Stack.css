@@ -1,0 +1,42 @@
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.stack.vertical {
+  flex-direction: column;
+}
+
+.stack.horizontal {
+  flex-direction: row;
+}
+
+.horizontal-start {
+  justify-content: start;
+  align-items: center;
+}
+
+.horizontal-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontal-end {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.vertical-start {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.vertical-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.vertical-end {
+  align-items: flex-end;
+  justify-content: center;
+}

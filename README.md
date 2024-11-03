@@ -25,6 +25,8 @@ npm install ghewar
 ```
 
 ## Usage
+
+### Simple Card 
 ```bash
 import { Button, Card, Heading } from 'ghewar'
 
@@ -41,6 +43,78 @@ const App = () => (
 );
 
 export default App;
+```
+
+### Complex Card 
+```bash
+import { Button, Card, Heading, ImageContainer, Stack } from "ghewar";
+import { Product } from "./ListingPage";
+
+const ProductCard = ({ title, price, thumbnail }: Product) => {
+  return (
+    <Card
+      header={
+        <Heading level={5} textStyle="bold">
+          {title}
+        </Heading>
+      }
+      body={
+        <Stack direction="horizontal" justifyContent="space-between">
+          <p>{price}</p>
+          <ImageContainer src={thumbnail} alt={title} />
+        </Stack>
+      }
+      footer={<Button onClick={() => alert("Product is added..")}>ADD</Button>}
+      variant="default"
+      size="medium"
+    />
+  );
+};
+
+export default ProductCard;
+```
+
+### Fetching data from Service 
+```bash
+import { DotLoader, ErrorDisplay, Stack, useFetch } from "ghewar";
+import ProductCard from "./ProductCard";
+
+export interface Product {
+  id?: number;
+  title: string;
+  price: string;
+  thumbnail: string;
+}
+
+const ListingPage = () => {
+  const { data, isLoading, error } = useFetch<Product>({
+    url: "https://dummyjson.com",
+    endpoint: "products",
+    dataKey: "products",
+  });
+
+  if (isLoading) return <DotLoader />;
+  if (error) return <ErrorDisplay />;
+  if (!data || data.length < 1) {
+    return <p>There is no data to display..</p>;
+  }
+
+  return (
+    <Stack direction="horizontal">
+      {data.map((dataItem) => (
+        <div key={dataItem.id}>
+          <ProductCard
+            title={dataItem.title}
+            price={dataItem.price}
+            thumbnail={dataItem.thumbnail}
+          />
+        </div>
+      ))}
+    </Stack>
+  );
+};
+
+export default ListingPage;
 ```
 
 ## License

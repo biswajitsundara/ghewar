@@ -1,0 +1,1 @@
+export { GProvider, useGContext } from './GContext';

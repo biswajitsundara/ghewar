@@ -5,6 +5,7 @@ interface HeadingProps extends React.HTMLAttributes<HTMLHeadingElement> {
   level?: 1 | 2 | 3 | 4 | 5 | 6;
   lineClamp?: number;
   transform?: "upper" | "lower" | "capitalize";
+  textStyle?: "bold" | "italic" | "underline";
   children: React.ReactNode;
 }
 
@@ -13,10 +14,10 @@ function Heading({
   lineClamp = 1,
   transform,
   children,
+  textStyle,
   ...props
 }: HeadingProps) {
-  
-const Tag : 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' = `h${level}`;
+  const Tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" = `h${level}`;
 
   const clampedTextStyle: React.CSSProperties = {
     display: "-webkit-box",
@@ -33,11 +34,14 @@ const Tag : 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' = `h${level}`;
     headingClassName = `${headingClassName} text-${transform}`;
   }
 
+  if (textStyle) {
+    headingClassName = `${headingClassName} text-${textStyle}`;
+  }
+
   return (
     <Tag {...props} className={headingClassName} style={clampedTextStyle}>
       {children}
     </Tag>
-
   );
 }
 

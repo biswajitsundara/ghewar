@@ -1,0 +1,34 @@
+.error-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.error-title {
+  color: rgb(244, 58, 58);
+  font-size: 24px;
+  margin: 0;
+}
+
+.error-message {
+  color: #555;
+  text-align: center;
+}
+
+.generic-error {
+  display: flex;
+  color: rgb(244, 58, 58);
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+}
+
+.default-error{
+    margin-left: 2rem;
+}

@@ -38,3 +38,15 @@
 .text-capitalize {
   text-transform: capitalize;
 }
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-italics {
+  font-style: italic;
+}
+
+.text-underline {
+  font-style: underline;
+}
