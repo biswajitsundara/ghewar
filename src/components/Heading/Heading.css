@@ -43,10 +43,10 @@
   font-weight: bold;
 }
 
-.text-italics {
+.text-italic {
   font-style: italic;
 }
 
 .text-underline {
-  font-style: underline;
+  text-decoration: underline;
 }
