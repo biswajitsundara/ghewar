@@ -25,7 +25,7 @@ const useFetch = <T extends {}>({
 
   const abortControllerRef = useRef<AbortController | null>(null);
 
-  useEffect(() => {}, []);
+  // useEffect(() => {}, []);
 
   useEffect(() => {
     const fetchData = async () => {
