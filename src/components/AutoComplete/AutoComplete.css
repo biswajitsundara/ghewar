@@ -1,0 +1,127 @@
+/* Style for autocomplete container */
+.autocomplete-container {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.autocomplete-container.focused {
+  border-color: #4a4b4c;
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+.autocomplete-input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.autocomplete-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.autocomplete-input:focus {
+  outline: none;
+}
+
+/* Arrow container and dropdown arrow */
+.arrow-container {
+  margin-left: 1px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 5px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  width: 2rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: none; /* No left border to make it connected with the input */
+}
+
+/* Dropdown arrow */
+.arrow {
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg); /* Default downward arrow */
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.arrow.open {
+  transform: rotate(-135deg); /* Rotate to upward when dropdown is open */
+}
+
+/* Suggestion list styles */
+.suggestion-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  margin-top: 4px;
+  padding: 0;
+  list-style: none;
+  max-width: 100%;
+}
+
+/* Custom scrollbar styles */
+.suggestion-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.suggestion-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.suggestion-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+  border: 2px solid #f1f1f1;
+}
+
+.suggestion-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.suggestion-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #d0d9dd; /* Highlight item on hover or when selected */
+}
+
+/* Loading and error messages */
+.loading,
+.error {
+  padding: 7px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #ff0000;
+}
+
+.loading {
+  color: #646668;
+}
