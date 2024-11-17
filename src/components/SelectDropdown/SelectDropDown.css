@@ -1,0 +1,114 @@
+/* Container for the dropdown */
+.select-dropdown-container {
+  position: relative;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+  background-color: #fff;
+}
+
+/* Wrapper for the input and arrow button */
+.select-dropdown-input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+/* The input field */
+.select-dropdown-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+/* Style when the input is focused */
+.select-dropdown-input:focus {
+  outline: none; /* Remove default browser outline */
+  border: 2px solid #4a4b4c;
+}
+
+/* Arrow icon container */
+.arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg); /* Downward arrow */
+  border: solid #333;
+  border-width: 0 2px 2px 0;
+  padding: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: translateY(-50%) rotate(-135deg); /* Rotate arrow to point upwards */
+}
+
+/* Dropdown list */
+.select-dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  margin-top: 4px;
+  padding: 0;
+  list-style: none;
+  max-width: 100%;
+}
+
+/* Custom scrollbar for the dropdown */
+.select-dropdown-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.select-dropdown-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.select-dropdown-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.select-dropdown-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Dropdown items */
+.select-dropdown-item {
+  padding: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.select-dropdown-item:hover {
+  background-color: #efeded;
+}
+
+/* Selected item highlight */
+.select-dropdown-item.selected {
+  font-weight: bold;
+}
+
+/* If there are no options */
+.select-dropdown-item.no-options {
+  color: #ea5353;
+  padding: 10px;
+}
+
+.select-dropdown-item.no-options:hover {
+  background-color: transparent;
+}
