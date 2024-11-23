@@ -1,0 +1,54 @@
+.input-wrapper {
+  position: relative;
+}
+
+.input-field {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  line-height: 1.25rem;
+  height: 1.5rem;
+  padding-left: 0.7rem;
+  font-size: 16px;
+}
+
+.input-field.invalid {
+  border: 2px solid;
+  border-color: red;
+}
+
+.error-text {
+  color: red;
+}
+
+.floating-label {
+  position: absolute;
+  top: 20px;
+  left: 4px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  transition: all 0.2s ease;
+  color: #888;
+  background-color: white;
+  padding: 0 4px;
+  line-height: 1.5; /* Control space inside the label */
+  transition: all 0.2s ease;
+}
+
+.input-wrapper.focused .floating-label {
+  top: -1px;
+  left: 8px;
+  color: #353739;
+  font-size: 14px;
+  color: #353739;
+  font-weight: bold;
+}
+
+.input-wrapper.focused .floating-label.invalid {
+  top: -1px;
+  left: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ef470a;
+}
