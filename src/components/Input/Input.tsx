@@ -39,12 +39,12 @@ const Input = ({
       let errorMessage = "";
 
       // Check for minimum length if applicable
-      if (validator.minLength && value.length < validator.minLength) {
+      if (validator.minLength && value.length+1 < validator.minLength) {
         isValid = false;
         errorMessage = `Minimum ${validator.minLength} characters required`;
       }
 
-      if (validator.maxLength && value.length > validator.maxLength) {
+      if (validator.maxLength && value.length+1 > validator.maxLength) {
         isValid = false;
         errorMessage = `Maximum ${validator.maxLength} characters allowed`;
       }
