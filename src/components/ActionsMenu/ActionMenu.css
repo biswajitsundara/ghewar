@@ -1,0 +1,43 @@
+.action-menu {
+  border-radius: 8px;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.4);
+  min-width: 176px;
+  overflow: auto;
+  padding: 8px 0;
+  position: absolute;
+  top: 55%;
+  right: 0;
+  white-space: nowrap;
+  z-index: 5;
+  background-color: white;
+}
+
+.action-menu-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 16px 20px 16px 16px;
+  text-decoration: none;
+}
+
+.action-menu-item:hover {
+  background: #dadce0;
+  color: #000;
+}
+
+.action-menu-text {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.action-menu-text > span {
+  font-weight: 400;
+  line-height: 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.action-menu-icon {
+  margin-right: 8px;
+}

@@ -1,0 +1,11 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  fill="currentColor"
+  className="bi bi-three-dots-horizontal"
+  viewBox="0 0 24 24"
+  aria-label="More options" 
+>
+  <path d="M5 12a2 2 0 1 1 4 0 2 2 0 0 1-4 0m6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0m6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+</svg>
